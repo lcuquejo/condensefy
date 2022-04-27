@@ -339,3 +339,341 @@ Now we will do the same thing but more clean:
     function max(a,b) {
         return (a > b) ? a : b;
     }
+
+Exercise FizzBuzz:
+
+If the number is divisible by 3 => Fizz
+If the number is divisible by 5 => Buzz
+If the number is divisible by both 3 and 5 => FizzBuzz
+If the number is not divisible by 3 or 5 => input
+If the number is not a number => 'NaN'
+
+const output = fizzBuzz(15);
+console.log(output);
+
+function fizzBuzz(input) { 
+     if ((input % 3 === 0) && (input % 5 === 0))
+        return 'FizzBuzz';
+
+     if (typeof input !== 'number')
+       return 'NaN';
+
+     if (input % 3 === 0)
+       return 'Fizz';
+
+     if (input % 5 === 0)
+        return 'Buzz';
+
+
+      return input;
+}
+
+Exercise 2: 
+
+//Speed Limit = 70
+//5 -> 1 point
+//Math.floor(1.3)
+//12 points -> suspended
+ 
+checkSpeed(130);
+
+function checkSpeed(speed) {
+    const speedLimit = 70;
+    const kmPerPoint = 5;
+
+    if (speed < speedLimit + kmPerPoint) {
+      console.log('Ok');
+      return;
+    }
+
+    const points = Math.floor((speed - speedLimit) / kmPerPoint);
+    if (points >= 12)
+        console.log('License suspended');
+    else
+        console.log('Points', points); 
+    }
+ 
+Exercise 3:
+
+showNumbers(10);
+
+function showNumbers(limit) {
+    for (let i = 0; i <= limit; i++) {
+        const message = (i % 2 === 0) ? 'EVEN' : 'ODD';
+        console.log(i, message);
+    }
+} 
+
+Exercise 4:
+
+Create a function called truthy that gets an array, and returns the number of truthy values in this array.
+
+const array = [0, null, undefined, '', 2, 3];
+
+console.log(countTruthy(array));
+
+function countTruthy(array) {
+    let count = 0;
+    for (let value of array)
+      if (value)
+        count++;
+    return count;
+} 
+
+Exercise 5:
+
+const movie = {
+  title: 'a',
+  releaseYear: 2018,
+  rating: 4.5,
+  director:'b'
+  };
+  
+  showProperties(movie);
+  
+  function showProperties(obj) {
+    for (let key in obj) {
+     if (typeof obj [key] === 'string')
+       console.log(key, obj[key]);     
+   }
+  }
+
+Exercise 6:
+
+console.log(sum(10));
+
+function sum(limit) {
+    let sum = 0;
+    for (let i = 0; i <= limit; i++)
+       if (i % 3 === 0 || i % 5 ===0)
+         sum+= i;
+
+return sum;
+}
+
+Exercise 7:
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+    const average = calculateAverage(marks);
+    if (average < 60) return 'F';
+    if (average < 70) return 'D';
+    if (average < 80) return 'C';
+    if (average < 90) return 'B';
+    return 'A';   
+}
+
+Function calculateAverage(array) {
+    let sum = 0;
+    for (let value of array)
+      sum += value;
+    return sum / array.length;
+}
+
+Exercise 8:
+
+showStars(2);
+
+function showStars(rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = '';
+        for (let i = 0; i < row; i++)
+          pattern += '*';
+        console.log(pattern);
+    }
+}
+
+Exercise 9:
+
+function showPrimes(limit) {
+    for (let number = 2; number <= limit; number++)
+      if (isPrime(number)) console.log(number);
+}
+
+function isPrime(number) {
+    for (let factor = 2; factor < number; factor++)
+      if (number % factor === 0)
+        return false;
+
+    return true;
+}
+
+Object-oriented Programming (OOP):
+Is a style of programming where we see a program as a collection of objects that talk to each other
+to perform some functionality.
+
+Ex:
+Const circle = {
+    radius:1,
+    location: {
+        x: 1,
+        y: 1
+    },
+    isVisible: true,
+    draw: function() {
+        console.log('draw');
+    }
+}; 
+
+Imagine we want to create two circle objects:
+
+// Factory Function
+
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console,log('draw');
+        }
+    };
+}
+
+const circle1 = createCircle(1);
+console.log(circle1);
+
+const circle2 = createCircle(2);
+console.log(circle2);
+
+We're going to create a function, and the job of this function is to construct or create an object.
+
+// Constructor Function
+
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+
+const circle = new Circle(1);
+
+To understand about objects in JavaScript is that they are dynamic, which means once you create them
+you can always add new properties or methods, or remove existing ones.
+
+Every object in JavaScript has a property called constructor and that references the function that 
+was used to construct or create that object.
+
+function Circle(radius) {
+    this.radius = radius;
+    this.draw = function() {
+        console.log('draw');
+    }
+}
+
+Circle.call({}, 1);
+Circle.apply({}, [1, 2, 3]);
+
+const another = new Circle(1);
+
+In JavaScript we have two categories of types. On one side we have value types, also called primitives, on the other side we have refernce types. So in the value types category we have number,
+string, boolean, symbol, undefined and null. On the other side we have objects, functions, and arrays.
+
+Primitives are copied by their value, Objects are copied by their reference.
+
+Ex:
+
+let obj = { value: 10};
+
+function increase(obj) {
+    obj.value++;
+}
+
+increase(obj);
+console.log(obj);
+
+Enumerating Properties of an Object:
+
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+for (let key in circle)
+   console.log(key, circle[key]);
+
+for (let key of object.keys(circle))
+   console.log(key);
+
+for (let entry of object.entries(circle)) 
+   console.log(entry);
+
+if ('color' in circle) console.log('yes');
+
+Cloning an Object:
+
+const circle = {
+    radius: 1,
+    draw() {
+        console.log('draw');
+    }
+};
+
+const another = Object.assign({}, circle);
+
+const another = {...circle};
+
+console.log(another);
+
+Garbage Collection:
+
+In low level of languages like C or C++, when creating an object, we need to allocate memory to it, and when we're done we need to reallocate memory. But in JavaScript, we dont have this concept. We can
+easily create the new object, at the time we initilized this object, the memory is automatically allo-
+cated to this object, next we can use that, and when we are done using, we dont need to deallocate the memory. So our JavaScript engine has what we call a garbage collector. The job of this garbage collector is to find the variables or constants that are no longer used and then deallocate the memory that was allocated to them earlier. Memory allocation and deallocation automatically happens behind the scenes, runs in the background, it figures out what variables are not used, and then it will automatically deallocate their memory.
+
+Math:
+
+Math is a built-in object that has properties and methods for mathematical constants and functions. Not a function object. 
+
+If you ever have to deal with mathematical calculations, just go to: 
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+Random method:
+Every time we call this method we get a new random number between 0 to 1.
+
+Math.random()
+
+String primitive:
+ex 1; const message = ' This is my first message ';
+ex 2; const message = 
+'This is my\n' +
+ '\'first\' message'; 
+
+String object:
+
+const another = new String('hi');
+
+Template literals are indicated by the back tick character:
+
+const another = `This is my 
+first message`;
+
+const another = 
+`This is my 
+"first" message`;
+
+const another =
+`Hi John,
+
+Thank you for joinig my mailing list.
+
+regards,
+Larissa`;
+
+const another = 
+`Hi ${name} ${2 + 3},
+
+Thank you for joining my mailing list.
+
+Regards,
+Larissa`;
+
+Date:
+
+const now = new Date();
+const date1 = new Date('May 11 2018 09:00');
+const date2 = new Date(2018, 4, 11, 9);
+
+now.setFullYear(2017);
