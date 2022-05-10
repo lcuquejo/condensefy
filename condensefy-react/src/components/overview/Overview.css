@@ -1,0 +1,19 @@
+.overview {
+    background-color: #232323;
+    color: #e4e4e4;
+    
+}
+
+.overview-content {
+    width: 100%;
+    margin: -3rem 0;
+    text-align: center;
+    padding: 2.5rem;
+}
+
+.overview-title {
+    color: #15a6d8;
+    text-align: start;
+    margin-bottom: 0.5rem;
+}
+
