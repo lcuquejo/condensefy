@@ -1,0 +1,61 @@
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    background: url('../../img/footer.png') no-repeat center center/cover;
+    margin: auto;
+    color: #ffffff;
+    font-size: 0.7rem;
+}
+
+ .footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: repeat(4, 0.2fr);
+    margin-left: 20rem;    
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: black;
+}
+
+.text-footer {
+    margin-left: 7rem;
+    margin-left: 39rem;
+    margin-top: 1rem;
+}
+
+.title1 {
+    margin-left: 40rem;
+}
+
+.title2 {
+    margin-left: 20rem;
+}
+
+
+
+/* .title {
+    margin-top: 7rem;
+    margin-left: 20rem;   
+}
+
+p {
+    margin: .4rem 0;
+    margin-top: 9rem;
+}
+
+.footer .social {
+    text-align: center;
+}
+
+.footer .icon {
+    font-size: 2rem;
+    margin: 1rem 9rem;
+} */
