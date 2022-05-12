@@ -11,19 +11,19 @@ const Products = () => {
     
     <div className='container'>
       <div>
-      <p>Cloud Architecture Consulting</p>
+      <h2>Cloud Architecture Consulting</h2>
       <img className='products-img' src={product1} alt="" height="200" />
       <p>Clouds, whether public or private, offer self-service developer capabilities as well as the elasticity and scalability that operations teams need to manage apps as demands change. With containers, microservices, and application program-
 ming interfaces (APIs), DevOps teams can make frequent improvements to cloud applications. These are the building blocks of cloud-native development and the reasons why organizations increasingly look to the cloud as they modernize</p>
       </div>
       <div>
-      <p>Containerization Consulting</p>
+      <h2>Containerization Consulting</h2>
       <img className='products-img' src={product2} alt="" height="200" />
       <p>Clouds, whether public or private, offer self-service developer capabilities as well as the elasticity and scalability that operations teams need to manage apps as demands change. With containers, microservices, and application program-
 ming interfaces (APIs), DevOps teams can make frequent improvements to cloud applications. These are the building blocks of cloud-native development and the reasons why organizations increasingly look to the cloud as they modernize</p>
       </div>
       <div>
-      <p>Cloud Optimization Services</p>
+      <h2>Cloud Optimization Services</h2>
       <img className='products-img' src={product3} alt="" height="200" />
       <p>Clouds, whether public or private, offer self-service developer capabilities as well as the elasticity and scalability that operations teams need to manage apps as demands change. With containers, microservices, and application program-
 ming interfaces (APIs), DevOps teams can make frequent improvements to cloud applications. These are the building blocks of cloud-native development and the reasons why organizations increasingly look to the cloud as they modernize</p>

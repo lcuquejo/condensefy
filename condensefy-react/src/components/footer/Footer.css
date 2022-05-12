@@ -39,23 +39,41 @@
     margin-left: 20rem;
 }
 
+@media screen and (max-width: 940px) {
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin: 0;
+    }
+
+    .text-footer {
+        
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+
+    .title1 {
+        margin-left: 2rem;
+        font-size: 1rem;
+    }
+    
+    .title2 {
+        margin-left: -3rem;
+        font-size: 1rem;
+    }
+
+    .social {
+        display: grid;
+        grid-template-columns: repeat(4, 0.2fr);
+        margin-left: -1.5rem;    
+    }
+
+    .icon {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: black;
+    
+    }
 
 
-/* .title {
-    margin-top: 7rem;
-    margin-left: 20rem;   
 }
-
-p {
-    margin: .4rem 0;
-    margin-top: 9rem;
-}
-
-.footer .social {
-    text-align: center;
-}
-
-.footer .icon {
-    font-size: 2rem;
-    margin: 1rem 9rem;
-} */
