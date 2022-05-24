@@ -20,11 +20,11 @@
     display: flex;
 }
 
+
 ul {
-    display: flex;
-    font-size: 0.8rem;
-    padding: 2rem;
-        
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0.5rem; 
 }
 
 .hamburger {
@@ -44,7 +44,9 @@ ul {
 .social {
     display: grid;
     grid-template-columns: repeat(4, 0.2fr);
-    margin-left: 2rem;    
+    grid-column-gap: 0.3rem;
+    margin-left: 1rem;
+    margin-right: -20rem;  
 }
 
 .tb {
@@ -68,15 +70,14 @@ ul {
   }
   
   #cover {
-    position: absolute;
-    top: 6.7rem;
-    left: 65%;
-    right: 0;
+    position: relative;
+    right: -5rem;
+    top: 3rem;
     height: 3rem;
     width: 20rem;
     padding: -1rem;
     margin: -5.5rem 0rem 0rem 10rem;
-    background-color: #75b1ff;
+    background-color: #1ab3e6;
     border-radius: 20px;
     box-shadow: 0 10px 40px #8390da, 0 0 0 20px #ffffffeb;
     transform: scale(0.6);
